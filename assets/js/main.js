@@ -51,7 +51,7 @@
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive)
+  navbarlinksActive()
   onscroll(document, navbarlinksActive)
 
   /**
@@ -77,7 +77,7 @@
         backtotop.classList.remove('active')
       }
     }
-    window.addEventListener('load', toggleBacktotop)
+    toggleBacktotop()
     onscroll(document, toggleBacktotop)
   }
 
@@ -122,11 +122,10 @@
   /**
    * Preloader
    */
+  // Remove as soon as the page is parsed; waiting for "load" meant waiting for every image.
   let preloader = select('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
+    preloader.remove()
   }
 
   /**
@@ -164,12 +163,26 @@
 
   /**
    * Porfolio isotope and filter
+   * Runs as soon as the page is parsed (this file is deferred) instead of waiting
+   * for every image. Images are lazy-loaded, so re-flow the grid as each arrives.
    */
-  window.addEventListener('load', () => {
+  (() => {
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item'
+      });
+
+      let relayoutTimer;
+      const relayout = () => {
+        clearTimeout(relayoutTimer);
+        relayoutTimer = setTimeout(() => portfolioIsotope.layout(), 50);
+      };
+      portfolioContainer.querySelectorAll('img').forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener('load', relayout);
+          img.addEventListener('error', relayout);
+        }
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
@@ -190,7 +203,7 @@
       }, true);
     }
 
-  });
+  })();
 
   /**
    * Initiate portfolio lightbox 
@@ -246,14 +259,16 @@
 
   /**
    * Animation on scroll
+   * Start immediately (not on window "load", which waits for every image).
+   * The "aos-ready" class tells the fallback in index.html not to strip animations.
    */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
+  document.documentElement.classList.add('aos-ready');
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
   });
+  window.addEventListener('load', () => AOS.refresh());
 
 })()

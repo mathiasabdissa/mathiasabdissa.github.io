@@ -12,12 +12,13 @@
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon" />
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-  <script src="https://cdn.tailwindcss.com"></script>
 
 
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
     rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
@@ -30,6 +31,15 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
+  <script>
+    // Content marked data-aos stays invisible until the AOS script starts.
+    // On slow connections, reveal everything after 2.5s instead of waiting.
+    setTimeout(function () {
+      if (!document.documentElement.classList.contains('aos-ready')) {
+        document.querySelectorAll('[data-aos]').forEach(function (el) { el.removeAttribute('data-aos'); });
+      }
+    }, 2500);
+  </script>
 </head>
 
 <body>
@@ -108,8 +118,8 @@
         </div>
 
         <div class="row">
-          <div class="flex col-lg-4 justify-center">
-            <img src="assets/img/profile-img.png" class="img-fluid max-h-[350px]" alt="Mathias Abdissa" />
+          <div class="col-lg-4 d-flex justify-content-center">
+            <img loading="lazy" decoding="async" src="assets/img/profile-img.png" class="img-fluid max-h-[350px]" alt="Mathias Abdissa" />
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
             <h3>Creative Technologist</h3>
@@ -397,20 +407,21 @@
             </div>
             <div class="resume-item">
 
-              <h4>Full-Stack Developer & Partnership Officer</h4>
+              <h4>Product Lead & Full-Stack Developer</h4>
               <h5>Nov 2021 - Present</h5>
-              <p><em>Jirtuu Software Labs/Part-time </em></p>
+              <p><em>Jirtuu Software Labs / Part-time</em></p>
               <ul>
                 <li>
-                  I worked on developing the frontend work of Bulk-SMS System
-                  used with different platforms.
+                  Lead product direction at Jirtuu: setting priorities, shaping features and guiding projects from idea to release.
                 </li>
                 <li>
-                  Worked on the System Frontend UI(User Interface)
-                  customization and improvement
+                  Give technical and design direction to the team across different client and internal projects.
                 </li>
                 <li>
-                  Worked on different part of the system in fixing the bugs.
+                  Built the frontend of the Bulk-SMS system used across different platforms.
+                </li>
+                <li>
+                  Customized and improved the system UI and fixed bugs across the platform.
                 </li>
               </ul>
             </div>
@@ -554,12 +565,12 @@
           <!-- PPS Testimony -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-ui">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/PPS-cover.png" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/PPS-cover.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>PEP (Productivity Enhancement Platform)</h4>
                 <p>UI Design</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/PPS-cover.png" data-gallery="portfolioGallery"
+                  <a href="assets/img/portfolio/PPS-cover.jpg" data-gallery="portfolioGallery"
                     class="portfolio-lightbox" title="PEP (Productivity Enhancement Platform)"><i
                       class="bx bx-plus"></i></a>
                   <a href="portfolio-details-PEP.html" class="portfolio-details-lightbox"
@@ -572,7 +583,7 @@
           <!-- SCM Testimony -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-ui">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/SCM Presentation.png" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/SCM Presentation.png" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>SCM(People Chain Management) Application</h4>
                 <p>UI Design</p>
@@ -589,7 +600,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>Gebeya Bahir Dar Logo | Ecommerce Platform</h4>
                 <p>Design</p>
@@ -607,7 +618,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>Guzo Adventures Logo Design</h4>
                 <p>Design</p>
@@ -624,7 +635,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>Ethio-Eritrea Peace Poster</h4>
                 <p>Design</p>
@@ -640,7 +651,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>Fanta Poster Design</h4>
                 <p>Design</p>
@@ -658,7 +669,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>Gemenaye Website Platform Poster | Promotion</h4>
                 <p>Design</p>
@@ -675,7 +686,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>BDU VLM Website Blog Promo</h4>
                 <p>Design</p>
@@ -690,7 +701,7 @@
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>Keleme-ቀለሜ BookStore Promotion</h4>
                 <p>Design</p>
@@ -706,7 +717,7 @@
           </div>
           <div class="col-lg-4 col-md-6 portfolio-item filter-development">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="Mathias Abdissa" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="Mathias Abdissa" />
               <div class="portfolio-info">
                 <h4>Amharic NLP</h4>
                 <p>Web and Mobile Application</p>
@@ -724,7 +735,7 @@
           <!-- Tel-Eshtaol -->
           <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/tel-eshtaol-cover.jpg" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/tel-eshtaol-cover.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Little Mekina</h4>
                 <p>Creative design</p>
@@ -741,7 +752,7 @@
           <!-- Tel-Eshtaol -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/tel-eshtaol-cover.jpg" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/tel-eshtaol-cover.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Tel-Eshtaol Newsfeed Application</h4>
                 <p>Web and Mobile Application</p>
@@ -758,7 +769,7 @@
           <!-- Abeba Blooms -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/promo-abeba.jpg" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/promo-abeba.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Abeba Blooms Mobile Application</h4>
                 <p>Mobile Application</p>
@@ -775,7 +786,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/taywan-app-home-screen.png" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/taywan-app-home-screen.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Taywan E-commerce Application</h4>
                 <p>Mobile Application</p>
@@ -792,7 +803,7 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Little_Mekina_1.jpeg" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/Little_Mekina_1.jpeg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Little Mekaina Ethiopia</h4>
                 <p>Creative Design</p>
@@ -808,7 +819,7 @@
           <!-- Ewunetegna Testimony -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-development">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/ewunetegna-testimony.jpg" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/ewunetegna-testimony.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Ewunetegna Testimony</h4>
                 <p>Web Application</p>
@@ -826,7 +837,7 @@
           <!-- Endebet -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-development">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/endebet-home.jpg" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/endebet-home.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Endebet</h4>
                 <p>Web Application</p>
@@ -843,12 +854,12 @@
           <!-- Hibret for Life -->
           <div class="col-lg-4 col-md-6 portfolio-item filter-development">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/hibre-for-life.png" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/hibre-for-life.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Hibret for Life</h4>
                 <p>Website Application</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/hibre-for-life.png" data-gallery="portfolioGallery"
+                  <a href="assets/img/portfolio/hibre-for-life.jpg" data-gallery="portfolioGallery"
                     class="portfolio-lightbox" title="Hibret for Life"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details-hibret-for-life.html" class="portfolio-details-lightbox"
                     data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
@@ -858,7 +869,7 @@
           </div>
           <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-mobile">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/promo-abeba.jpg" class="img-fluid" alt="" />
+              <img loading="lazy" decoding="async" src="assets/img/portfolio/promo-abeba.jpg" class="img-fluid" alt="" />
               <div class="portfolio-info">
                 <h4>Gebeya Online Mobile Application</h4>
                 <p>Mobile Application</p>
@@ -1004,7 +1015,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Kaleab Yilma Abebe</h3>
                 <h4>CEO &amp; Co-Founder</h4>
                 <p>
@@ -1018,7 +1029,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Dagmawi Mamusha</h3>
                 <h4>Designer &amp; Architect</h4>
                 <p>
@@ -1032,7 +1043,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Million Gashawbeza</h3>
                 <h4>Developer</h4>
                 <p>
@@ -1046,7 +1057,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Yididia Kassahun</h3>
                 <h4>Developer</h4>
                 <p>
@@ -1061,7 +1072,7 @@
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <img loading="lazy" decoding="async" src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
                 <p>
@@ -1176,26 +1187,24 @@
   </footer>
   <!-- End Footer -->
 
-  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script defer src="assets/vendor/aos/aos.js"></script>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script defer src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script defer src="assets/vendor/php-email-form/validate.js"></script>
+  <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer src="assets/vendor/typed.js/typed.min.js"></script>
+  <script defer src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
       referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script defer src="assets/js/main.js?v=2"></script>
 </body>
 
 </html>
